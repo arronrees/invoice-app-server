@@ -7,6 +7,9 @@ const InvoiceItem = db.define('invoiceItem', {
     primaryKey: true,
     defaultValue: UUIDV4,
   },
+  invoiceId: {
+    type: UUID,
+  },
   itemName: {
     type: DataTypes.STRING(1024),
   },

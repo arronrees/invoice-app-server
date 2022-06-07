@@ -16,6 +16,12 @@ const Invoice = db.define('invoice', {
   invoiceDescription: {
     type: DataTypes.STRING(1024),
   },
+  billFromId: {
+    type: UUID,
+  },
+  billToId: {
+    type: UUID,
+  },
 });
 
 Invoice.sync({ force: false }).then(() => {
