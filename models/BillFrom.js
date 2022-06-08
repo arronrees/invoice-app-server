@@ -13,7 +13,7 @@ const BillFrom = db.define('billFrom', {
   city: {
     type: DataTypes.STRING(1024),
   },
-  postCode: {
+  postcode: {
     type: DataTypes.STRING(1024),
   },
   country: {

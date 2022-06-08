@@ -19,7 +19,7 @@ const BillTo = db.define('billTo', {
   city: {
     type: DataTypes.STRING(1024),
   },
-  postCode: {
+  postcode: {
     type: DataTypes.STRING(1024),
   },
   country: {

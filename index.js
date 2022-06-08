@@ -1,15 +1,23 @@
 require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
+const invoiceRoutes = require('./routes/invoiceRoutes');
 
 const app = express();
 
 const { db } = require('./lib/db');
 
 // middleware
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(morgan('tiny'));
 
-app.use('*', (req, res) => {
+// routes
+app.use(invoiceRoutes);
+
+app.use((req, res) => {
   res.send('Hello');
 });
 
